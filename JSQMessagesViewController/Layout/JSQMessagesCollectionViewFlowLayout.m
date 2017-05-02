@@ -35,8 +35,8 @@
 #import "UIImage+JSQMessages.h"
 
 
-const CGFloat kJSQMessagesCollectionViewCellLabelHeightDefault = 20.0f;
-const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 30.0f;
+const CGFloat kJSQMessagesCollectionViewCellLabelHeightDefault = 40.0f;
+const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 44.0f;
 
 
 @interface JSQMessagesCollectionViewFlowLayout ()
