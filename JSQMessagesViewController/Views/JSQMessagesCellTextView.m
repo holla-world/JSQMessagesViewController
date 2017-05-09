@@ -38,8 +38,9 @@
     self.contentOffset = CGPointZero;
     self.textContainerInset = UIEdgeInsetsZero;
     self.textContainer.lineFragmentPadding = 0;
-    self.linkTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor],
-                                 NSUnderlineStyleAttributeName : @(NSUnderlineStyleSingle | NSUnderlinePatternSolid) };
+    self.linkTextAttributes = @{
+								NSUnderlineStyleAttributeName : @(NSUnderlineStyleSingle | NSUnderlinePatternSolid)
+								};
 }
 
 - (void)setSelectedRange:(NSRange)selectedRange
