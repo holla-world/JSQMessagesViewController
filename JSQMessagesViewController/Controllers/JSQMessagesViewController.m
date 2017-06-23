@@ -534,7 +534,7 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
     if (isOutgoingMessage && CGSizeEqualToSize(collectionView.collectionViewLayout.outgoingAvatarViewSize, CGSizeZero)) {
         needsAvatar = NO;
     }
-    else if (!isOutgoingMessage && CGSizeEqualToSize(collectionView.collectionViewLayout.incomingAvatarViewSize, CGSizeZero)) {
+    else if (!isOutgoingMessage && CGSizeEqualToSize(collectionView.collectionViewLayout.incomingAvatarViewSize, CGSizeZero) || [messageItem.text isEqualToString:@""]) {
         needsAvatar = NO;
     }
 

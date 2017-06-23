@@ -121,10 +121,10 @@
                                                           attributes:@{ NSFontAttributeName : layout.messageBubbleFont }
                                                              context:nil];
 
-        CGSize stringSize = CGRectIntegral(stringRect).size;
+		CGSize stringSize = [[messageData text] isEqualToString:@""] ? CGSizeZero : CGRectIntegral(stringRect).size;
 
         CGFloat verticalContainerInsets = layout.messageBubbleTextViewTextContainerInsets.top + layout.messageBubbleTextViewTextContainerInsets.bottom;
-        CGFloat verticalFrameInsets = layout.messageBubbleTextViewFrameInsets.top + layout.messageBubbleTextViewFrameInsets.bottom;
+		CGFloat verticalFrameInsets = [[messageData text] isEqualToString:@""] ? 0 : layout.messageBubbleTextViewFrameInsets.top + layout.messageBubbleTextViewFrameInsets.bottom;
 
         //  add extra 2 points of space (`self.additionalInset`), because `boundingRectWithSize:` is slightly off
         //  not sure why. magix. (shrug) if you know, submit a PR
@@ -148,7 +148,9 @@
 
     if ([messageSender isEqualToString:[layout.collectionView.dataSource senderId]]) {
         return layout.outgoingAvatarViewSize;
-    }
+	}else if ([messageData.text isEqualToString:@""]) {
+		return layout.outgoingAvatarViewSize;
+	}
 
     return layout.incomingAvatarViewSize;
 }
