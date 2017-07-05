@@ -865,7 +865,7 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
 - (void)jsq_updateCollectionViewInsets
 {
     const CGFloat top = self.additionalContentInset.top;
-    const CGFloat bottom = CGRectGetMaxY(self.collectionView.frame) - CGRectGetMinY(self.inputToolbar.frame) + self.additionalContentInset.bottom;
+    const CGFloat bottom = CGRectGetMaxY(self.collectionView.frame) - MAX(CGRectGetMinY(self.inputToolbar.frame), CGRectGetMinY(self.inputToolbar.superview.frame)) + self.additionalContentInset.bottom;
     [self jsq_setCollectionViewInsetsTopValue:top bottomValue:bottom];
 }
 
