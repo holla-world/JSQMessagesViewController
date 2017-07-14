@@ -19,6 +19,7 @@
                     <rect key="frame" x="271" y="0.0" width="49" height="52"/>
                     <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstAttribute="height" constant="52" id="p0J-Al-0qi"/>
                         <constraint firstAttribute="width" constant="49" id="yde-S9-dHe"/>
                     </constraints>
                 </view>
@@ -36,7 +37,6 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Myo-1S-Vg1" firstAttribute="top" secondItem="1" secondAttribute="top" id="4U3-Lx-KoQ"/>
                 <constraint firstItem="Myo-1S-Vg1" firstAttribute="leading" secondItem="dm4-NT-mvr" secondAttribute="trailing" constant="42" id="7Ld-5r-Hp3"/>
                 <constraint firstItem="dm4-NT-mvr" firstAttribute="top" secondItem="1" secondAttribute="top" constant="14" id="9Tz-Wq-xIf"/>
                 <constraint firstAttribute="bottom" secondItem="dm4-NT-mvr" secondAttribute="bottom" constant="14" id="CCb-V7-yek"/>
